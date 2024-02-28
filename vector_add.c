@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector_add.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 14:26:41 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/02/28 14:36:56 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/02/28 14:57:38 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ int	vector_add(t_vector *vector, void *value)
 	ft_memcpy(vector->tab + vector->len * vector->value_size, value,
 		vector->value_size);
 	vector->len++;
+	return (0);
 }
