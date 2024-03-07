@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_search.c                                    :+:      :+:    :+:   */
+/*   vector_foreach.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/28 14:45:26 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/07 22:44:53 by lcottet          ###   ########.fr       */
+/*   Created: 2024/03/07 22:55:18 by lcottet           #+#    #+#             */
+/*   Updated: 2024/03/07 23:04:40 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 
-ssize_t	vector_search(t_vector *vector,
-	void *search_value, int (*search)(void*, void*))
+void	vector_foreach(t_vector *vector, void (*f)(void *))
 {
 	size_t	i;
 
 	i = 0;
 	while (i < vector->len)
 	{
-		if (search(vector->tab + vector->value_size * i, search_value))
-			return (i);
+		f(((char *)vector->tab) + i * vector->value_size);
 		i++;
 	}
-	return (-1);
 }

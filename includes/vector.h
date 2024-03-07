@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:11:59 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/07 19:50:37 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/07 22:57:10 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int		vector_add(t_vector *vector, void *value);
 void	vector_remove(t_vector *vector, size_t index);
 void	vector_init(t_vector *vector, size_t value_size);
 void	vector_free(t_vector *vector);
-ssize_t	vector_search(t_vector *vector, void *search_value, int (*search)(void*, void*));
+ssize_t	vector_search(t_vector *vector,
+			void *search_value, int (*search)(void*, void*));
+void	vector_foreach(t_vector *vector, void (*f)(void *));
 
 #endif
