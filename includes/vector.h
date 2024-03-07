@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   vector.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:11:59 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/02/28 15:01:05 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/03/07 19:50:37 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VECTOR_H
 # define VECTOR_H
 
-# define VECT_SIZE 2
+# define VECT_SIZE 4
 
 # include <stddef.h>
 # include <unistd.h>

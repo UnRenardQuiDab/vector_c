@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 14:12:42 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/02/28 14:36:26 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/07 20:06:01 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,16 @@ int	vector_realloc(t_vector *vector)
 		vector->alloc = VECT_SIZE;
 	else
 		vector->alloc *= 2;
-	new_tab = malloc(sizeof(vector->value_size) * vector->alloc);
+	new_tab = malloc(vector->value_size * vector->alloc);
 	if (!new_tab)
 	{
-		free(vector->tab);
+		if (vector->tab)
+			free(vector->tab);
 		return (-1);
 	}
 	ft_memcpy(new_tab, vector->tab, vector->value_size * vector->len);
-	free(vector->tab);
+	if (vector->tab)
+		free(vector->tab);
 	vector->tab = new_tab;
 	return (0);
 }
