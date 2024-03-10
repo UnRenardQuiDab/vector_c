@@ -6,7 +6,7 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:11:59 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/07 22:57:10 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/03/10 19:29:08 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_vector
 
 int		vector_realloc(t_vector *vector);
 int		vector_add(t_vector *vector, void *value);
+int		vector_addstr(t_vector *vector, char *str);
 void	vector_remove(t_vector *vector, size_t index);
 void	vector_init(t_vector *vector, size_t value_size);
 void	vector_free(t_vector *vector);

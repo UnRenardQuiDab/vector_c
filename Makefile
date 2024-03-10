@@ -6,16 +6,17 @@
 #    By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/28 16:22:00 by bwisniew          #+#    #+#              #
-#    Updated: 2024/03/08 12:23:03 by lcottet          ###   ########.fr        #
+#    Updated: 2024/03/10 19:36:15 by lcottet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=cc
-C_FLAGS=-Wall -Wextra -Werror -MMD -MP
+C_FLAGS=-g3 -Wall -Wextra -Werror -MMD -MP
 LIBC=ar
 LIBC_FLAG=crs 
 SRC=	vector_add.c vector_free.c vector_init.c vector_realloc.c \
-		vector_search.c vector_foreach.c vector_remove.c
+		vector_search.c vector_foreach.c vector_remove.c \
+		vector_addstr.c
 OUTDIR=obj
 OBJ=$(SRC:%.c=$(OUTDIR)/%.o)
 DEP=$(OBJ:.o=.d)
