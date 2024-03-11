@@ -6,7 +6,7 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 14:40:50 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/02/28 14:57:27 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/03/11 16:38:14 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 void	vector_free(t_vector *vector)
 {
-	free(vector->tab);
+	if (vector->tab)
+		free(vector->tab);
 	vector_init(vector, vector->value_size);
 }
