@@ -6,7 +6,7 @@
 /*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 14:42:24 by lcottet           #+#    #+#             */
-/*   Updated: 2024/02/28 14:55:48 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/03/12 15:59:28 by lcottet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	vector_remove(t_vector *vector, size_t index)
 {
 	ft_memmove(vector->tab + index * vector->value_size,
 		vector->tab + (index + 1) * vector->value_size,
-		(vector->len - index) * vector->value_size);
+		(vector->len - index - 1) * vector->value_size);
 	vector->len--;
 }
