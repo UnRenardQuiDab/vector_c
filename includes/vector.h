@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vector.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcottet <lcottet@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 14:11:59 by bwisniew          #+#    #+#             */
-/*   Updated: 2024/03/10 19:29:08 by lcottet          ###   ########.fr       */
+/*   Updated: 2024/03/18 19:26:40 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_vector
 
 int		vector_realloc(t_vector *vector);
 int		vector_add(t_vector *vector, void *value);
+int		vector_addi(t_vector *vector, void *value, size_t index);
 int		vector_addstr(t_vector *vector, char *str);
 void	vector_remove(t_vector *vector, size_t index);
 void	vector_init(t_vector *vector, size_t value_size);
