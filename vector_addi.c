@@ -6,7 +6,7 @@
 /*   By: bwisniew <bwisniew@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 19:03:27 by lcottet           #+#    #+#             */
-/*   Updated: 2024/03/19 14:38:22 by bwisniew         ###   ########.fr       */
+/*   Updated: 2024/03/19 17:07:54 by bwisniew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ static void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	return (dest);
 }
-
-
 
 int	vector_addi(t_vector *vector, void *value, size_t index)
 {
